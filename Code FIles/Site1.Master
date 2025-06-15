@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site1.master.cs" Inherits="Site1" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>My Application</title>
+    <link href="App_Themes/Default/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <h1>Welcome to My Application</h1>
+                <nav>
+                </nav>
+            </header>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                <br />
+                    <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" />
+                    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource2" 
+                              Orientation="Horizontal" CssClass="nav-menu" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticMenuStyle CssClass="nav-item" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle CssClass="nav-item" BackColor="#FFFBD6" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                    </asp:Menu>
+            </asp:ContentPlaceHolder>
+            <footer>
+                <p>&copy; 2025 My Application. All rights reserved.</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
